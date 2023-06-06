@@ -119,7 +119,7 @@ function keepScore(point) {
     saveLocalScore()
 }
 
-// Play Again
+
 playAgainBtn.addEventListener('click', () => {
     gameDiv.classList.toggle('hidden')
     resultsDiv.classList.toggle('hidden')
@@ -133,7 +133,7 @@ playAgainBtn.addEventListener('click', () => {
     resultsDiv.classList.toggle('show-winner')
 })
 
-// Show/Hide Rules
+
 btnRules.addEventListener('click', () => {
     modalRules.classList.toggle('show-modal');
 });
@@ -144,12 +144,12 @@ btnClose.addEventListener('click', () => {
 
 
 function saveLocalScore() {
-    //CHECK---HEY Do I already have things in there?
+    
     localStorage.setItem('scorePoints', JSON.stringify(score))
 }
 
 function getCurrentScore() {
-    //CHECK---HEY Do I already have things in there?
+    
     score = JSON.parse(localStorage.getItem('scorePoints'));
     scoreNumber.innerText = score
 
